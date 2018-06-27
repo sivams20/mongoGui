@@ -1,0 +1,16 @@
+
+<div class="login">
+  <h1 class="login-heading">
+    <strong>Welcome.</strong> Please login.</h1>
+    <form (submit)="login($event, username.value, password.value)">
+      <input type="text" #username id="username" name="user" placeholder="Username" class="input-txt" />
+      <input type="password" #password name="password" placeholder="Password" class="input-txt" />
+        <div class="login-footer">
+            <a href="#" class="lnk">
+            <span class="icon icon--min">ಠ╭╮ಠ</span> 
+            I've forgotten something
+          </a>
+          <button type="submit" class="btn btn--right">Sign in  </button>
+        </div>
+    </form>
+</div>
