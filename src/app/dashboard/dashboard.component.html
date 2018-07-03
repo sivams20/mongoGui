@@ -1,9 +1,8 @@
 <ul class="nav nav-pills nav-justified dash-tab">
-  <li class="active"><a>MOVIES</a></li>
-  <li><a>MUSIC</a></li>
-  <li><a>EVENTS</a></li>
+  <li routerLink="/dashboard/movies" routerLinkActive="active"><a>MOVIES</a></li>
+  <li routerLink="/dashboard/events" routerLinkActive="active"><a>EVENTS</a></li>
+  <li routerLink="/dashboard/musics" routerLinkActive="active"><a>MUSICS</a></li>
 </ul>
 <div>
-    <a [routerLink]="['movies']">Movies</a>
   <router-outlet></router-outlet>
 </div>

@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CitiesComponent } from './cities/cities.component';
-import { EventsComponent } from './events/events.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,8 +19,6 @@ const routes : Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CitiesComponent,
-    EventsComponent,
     HeaderComponent,
     LoginComponent,
     FooterComponent
