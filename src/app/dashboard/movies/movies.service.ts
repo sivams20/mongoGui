@@ -5,12 +5,11 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MoviesService {
 
-    baseUrl:string = "http://localhost:3000";
   constructor(private httpClient : HttpClient) { }
 
 
     getMovies(): Observable<any>{
-        return this.httpClient.get(this.baseUrl + '/products');
+        return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
     }
 
 }

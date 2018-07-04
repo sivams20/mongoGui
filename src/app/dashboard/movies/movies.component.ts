@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class MoviesComponent implements OnInit {
 
+  movies : string;
   constructor(private moviesService : MoviesService, private router: Router) { }
 
   ngOnInit() {
@@ -17,8 +18,9 @@ export class MoviesComponent implements OnInit {
   }
 
   getMovies(){
-    this.moviesService.getMovies().subscribe(function(data){
+    this.moviesService.getMovies().subscribe((data) =>{
       console.log(data);
+      this.movies = data;
     });
   }
 

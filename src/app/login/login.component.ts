@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     console.log(event);
     console.log(username);
     console.log(password);
-    this.router.navigate(['dashboard/movies']);
+    this.router.navigate(['dashboard/movies/list']);
     //this.router.navigate(['dashboard/movies']);
   }
 

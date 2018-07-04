@@ -1,22 +1,5 @@
 <button (click)="addMovie()">ADD MOVIE</button>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE1</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE2</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE3</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE4</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE5</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE6</a>
-</div>
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">MOVIE7</a>
+
+<div *ngFor="let movie of movies" class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">{{movie.name}}</a>
 </div>
