@@ -1,5 +1,5 @@
 <button (click)="addMovie()">ADD MOVIE</button>
 
-<div *ngFor="let movie of movies" class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">{{movie.name}}</a>
+<div *ngFor="let movie of movies | async" class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">{{movie.title}}</a>
 </div>

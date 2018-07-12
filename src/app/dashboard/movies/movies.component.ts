@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { MoviesService } from './movies.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+
+import { Movie } from './models/movie';
 
 @Component({
   selector: 'app-movies',
@@ -10,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class MoviesComponent implements OnInit {
 
-  movies : string;
+  movies : Observable <Movie>;
   constructor(private moviesService : MoviesService, private router: Router) { }
 
   ngOnInit() {
@@ -18,10 +21,11 @@ export class MoviesComponent implements OnInit {
   }
 
   getMovies(){
-    this.moviesService.getMovies().subscribe((data) =>{
-      console.log(data);
-      this.movies = data;
-    });
+    this.movies = this.moviesService.getMovies();
+    // this.moviesService.getMovies().subscribe((data) =>{
+    //   console.log(data);
+    //   this.movies = data;
+    // });
   }
 
   addMovie(){
